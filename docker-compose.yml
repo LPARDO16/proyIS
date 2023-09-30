@@ -3,13 +3,13 @@ services:
   front:
     image: python:3.11-alpine
     build:
-      context: .
+      context: ../../Downloads
       dockerfile: Dockerfile
     ports:
       - "3000:5000"
 
   db:
-    image: postgres:15,
+    image: postgres:15
     restart: always
     ports:
       - "5431:5432"
