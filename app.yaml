@@ -1,2 +1,0 @@
-runtime: python311  # Cambia esto según la versión de Python que estés utilizando (asegúrate de que 3.11 sea una versión compatible)
-entrypoint: gunicorn -b :$PORT Login:app  # Reemplaza 'Login' con el nombre de tu archivo y 'app' con el nombre de tu aplicación

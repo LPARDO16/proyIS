@@ -13,15 +13,15 @@ app.secret_key = 'Pardo@28062000'
 
 # Datos de conexión a la base de datos
 db_params = {
-    'dbname': 'BDProyectoIS',
+    'dbname': 'bdproyecto',
     'user': 'postgres',
-    'password': 'Pardo@2000',
-    'host': 'localhost',
-    'port': '5432',
+    'password': '12345',
+    'host': 'db',
+    'port': '5431',
 }
 #cadena de conexión a PostgreSQL
-app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:Pardo@2000@34.67.56.45:5432/BDProyectoIS'
-db = SQLAlchemy(app)
+# app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:Pardo@2000@34.67.56.45:5432/BDProyectoIS'
+# db = SQLAlchemy(app)
 def login(username, password):
     try:
         # Establecer conexión a la base de datos
