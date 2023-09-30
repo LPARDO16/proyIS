@@ -17,7 +17,7 @@ db_params = {
     'user': 'postgres',
     'password': '12345',
     'host': 'db',
-    'port': '5431',
+    'port': '5432',
 }
 #cadena de conexión a PostgreSQL
 # app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:Pardo@2000@34.67.56.45:5432/BDProyectoIS'
