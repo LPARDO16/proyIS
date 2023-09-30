@@ -1,0 +1,46 @@
+# This file specifies files that are *not* uploaded to Google Cloud
+# using gcloud. It follows the same syntax as .gitignore, with the addition of
+# "#!include" directives (which insert the entries of the given .gitignore-style
+# file at that point).
+#
+# For more information, run:
+#   $ gcloud topic gcloudignore
+#
+.gcloudignore
+
+# Si deseas cargar tu directorio .git, archivo .gitignore o archivos
+# de tu archivo .gitignore, elimina la línea correspondiente
+.git
+.gitignore
+
+# Python pycache:
+__pycache__/
+# Ignorado por el sistema de compilación
+/setup.cfg
+
+# Carpetas y archivos de desarrollo local
+venv/
+.vscode/
+.idea/
+*.pyc
+*.pyo
+*.pyd
+*.db
+*.sqlite3
+
+# Registros y archivos generados
+logs/
+*.log
+*.log.*
+*.swp
+
+# Archivos y carpetas específicos de tu proyecto que no necesitas en la nube
+/static/
+__init__.py
+.env
+db.sqlite
+
+# Carpetas y archivos específicos de Flask (dependiendo de tu estructura)
+# flask_sesion/
+# ...
+

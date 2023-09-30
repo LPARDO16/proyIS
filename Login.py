@@ -1,17 +1,15 @@
 from flask import Flask, render_template, request, redirect, session, flash, url_for
-from flask_session import Session
+from flask_sqlalchemy import SQLAlchemy
 import psycopg2
 import pandas as pd
 from sqlalchemy import create_engine
 import plotly.express as px
-import plotly.graph_objs as go
 
 
-app = Flask(__name__)
+app = Flask(__name__, template_folder="templates", static_folder="static")
 app.config['SESSION_TYPE'] = 'filesystem'
 app.secret_key = 'Pardo@28062000'
-
-Session(app)
+#Session(app)
 
 # Datos de conexión a la base de datos
 db_params = {
@@ -21,11 +19,9 @@ db_params = {
     'host': 'localhost',
     'port': '5432',
 }
-# Crea una cadena de conexión SQLAlchemy
-db_uri = f"postgresql+psycopg2://{db_params['user']}:{db_params['password']}@{db_params['host']}:{db_params['port']}/{db_params['dbname']}"
-
-# Crea un motor SQLAlchemy
-engine = create_engine(db_uri)
+#cadena de conexión a PostgreSQL
+app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:Pardo@2000@34.67.56.45:5432/BDProyectoIS'
+db = SQLAlchemy(app)
 def login(username, password):
     try:
         # Establecer conexión a la base de datos
